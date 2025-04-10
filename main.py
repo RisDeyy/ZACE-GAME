@@ -4,13 +4,11 @@ import subprocess
 import argparse
 
 def start_server():
-    """Start the game server"""
     print("Starting server...")
     server_process = subprocess.Popen([sys.executable, "server.py"])
     return server_process
 
 def start_client():
-    """Start a game client"""
     print("Starting client...")
     client_process = subprocess.Popen([sys.executable, "client.py"])
     return client_process
@@ -36,7 +34,6 @@ def main():
             processes.append(client_process)
     
     try:
-        # Wait for any process to finish
         for process in processes:
             process.wait()
     except KeyboardInterrupt:
@@ -47,14 +44,6 @@ def main():
     print("All processes terminated")
 
 if __name__ == "__main__":
-    # with open("server.py", "w", encoding="utf-8") as f:
-    #     with open("zace_game_server.py", "r", encoding="utf-8") as source:
-    #         f.write(source.read())
-
-    # with open("client.py", "w", encoding="utf-8") as f:
-    #     with open("zace_game_client.py", "r", encoding="utf-8") as source:
-    #         f.write(source.read())
-
     main()
 
 # python main.py --mode server

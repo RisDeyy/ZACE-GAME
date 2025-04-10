@@ -47,13 +47,13 @@ def main():
     print("All processes terminated")
 
 if __name__ == "__main__":
-    with open("server.py", "w", encoding="utf-8") as f:
-        with open("zace_game_server.py", "r", encoding="utf-8") as source:
-            f.write(source.read())
+    # with open("server.py", "w", encoding="utf-8") as f:
+    #     with open("zace_game_server.py", "r", encoding="utf-8") as source:
+    #         f.write(source.read())
 
-    with open("client.py", "w", encoding="utf-8") as f:
-        with open("zace_game_client.py", "r", encoding="utf-8") as source:
-            f.write(source.read())
+    # with open("client.py", "w", encoding="utf-8") as f:
+    #     with open("zace_game_client.py", "r", encoding="utf-8") as source:
+    #         f.write(source.read())
 
     main()
 

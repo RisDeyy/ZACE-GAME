@@ -14,7 +14,7 @@ def start_client():
     return client_process
 
 def main():
-    parser = argparse.ArgumentParser(description="Maze Game Launcher")
+    parser = argparse.ArgumentParser(description="Zace Game Launcher")
     parser.add_argument('--mode', choices=['server', 'client', 'both'], default='both', 
                         help='Start as server, client, or both')
     parser.add_argument('--clients', type=int, default=1, 
@@ -48,3 +48,5 @@ if __name__ == "__main__":
 
 # python main.py --mode server
 # python main.py --mode client
+# ----------------------------
+# python main.py --mode both 
